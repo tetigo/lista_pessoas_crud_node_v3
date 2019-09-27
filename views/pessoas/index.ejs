@@ -1,0 +1,28 @@
+<% include ../partials/header %>
+
+<h1>Nova Pessoa v3 (ORM)</h1>
+<p><a href="/pessoas/create">Criar Nova Pessoa</a></p>
+
+    <table class="table table-striped table-hover table-bordered table-responsive">
+        <tr>
+            <th>Nome</th>
+            <th>Nacionalidade</th>
+            <th>Cargo</th>
+            <th>Ações</th>
+        </tr>
+        <%pessoas.forEach(pessoa => {%>
+            <tr>
+                <td><%= pessoa.nome %></td>
+                <td><%= pessoa.nacionalidade %></td>
+                <td><%= pessoa.cargo %></td>
+                <td>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <a href="/pessoas/edit/<%=pessoa.id%>" type="button" class="btn btn-default">Editar</a>
+                        <a href="/pessoas/delete/<%=pessoa.id%>" type="button" class="btn btn-default">Excluir</a>
+                    </div>
+                </td>
+            </tr>
+        <%})%>
+    </table>
+
+<% include ../partials/footer %>

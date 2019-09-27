@@ -1,0 +1,25 @@
+<% include ../partials/header %>
+
+<h1>Editar Pessoa</h1>
+<p><a href="/pessoas">Voltar para a lista de pessoas</a></p>
+
+<form method="post">
+    <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" value="<%=pessoa.nome%>">
+    </div>
+
+    <div class="form-group">
+        <label for="nacionalidade">Nacionalidade</label>
+        <input type="text" class="form-control" id="nacionalidade" name="nacionalidade" placeholder="Digite sua nacionalidade" value = <%=pessoa.nacionalidade%>>
+    </div>
+
+    <div class="form-group">
+        <label for="cargo">Cargo</label>
+        <input type="text" class="form-control" id="cargo" name="cargo" placeholder="Digite seu cargo" value="<%=pessoa.cargo%>">
+    </div>
+
+    <button class="btn btn-info">Salvar</button>
+</form>
+
+<% include ../partials/footer %>
